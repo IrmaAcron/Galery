@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея картин</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Вставьте CSS из вашего base.html сюда */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* ... остальные стили ... */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Галерея картин</h1>
+    </header>
+    <main>
+        <div class="gallery">
+            <!-- Статические данные -->
+            <div class="painting">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/300x200" alt="Картина 1" class="protected-image">
+                    <div class="overlay"></div>
+                </div>
+                <h2>Картина 1</h2>
+                <p>Описание картины 1.</p>
+                <p>Цена: 50 € (10 TON)</p>
+                <p>Статус: Продажа</p>
+            </div>
+            <div class="painting">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/300x200" alt="Картина 2" class="protected-image">
+                    <div class="overlay"></div>
+                </div>
+                <h2>Картина 2</h2>
+                <p>Описание картины 2.</p>
+                <p>Цена: 2500 € (1 ETH)</p>
+                <p>Статус: На аукционе</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG') e.preventDefault();
+        });
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.tagName === 'IMG') e.preventDefault();
+        });
+    </script>
+</body>
+</html>
